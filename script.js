@@ -216,7 +216,6 @@ const hint = document.getElementById("formHint");
 
 const SEED_REVIEWS = [
   { name: "Neil Togado", movie: "Spirited Away", rating: 5, comment: "A film that grows with you. I see something different every time I rewatch it." },
-  { name: "Karl Duenas", movie: "Spirited Away", rating: 5, comment: "The final ten minutes of this movie are the most exhilarating in modern cinema. Full stop." }
 ];
 
 function stars(n) {

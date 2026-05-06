@@ -4,28 +4,64 @@
 
 const MOVIES = [
   {
-    title: "The Godfather",
-    year: 1972,
-    genre: "Crime, Drama",
-    director: "Francis Ford Coppola",
-    cast: "Marlon Brando, Al Pacino, James Caan",
-    runtime: "175 min",
-    rating: 4.9,
-    poster: "https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    title: "Phantom Lawyer",
+    year: 2026,
+    genre: "Fantasy, Law",
+    director: "Shin Joong-hoon",
+    cast: "Yoo Yeon-seok, Esom, Kim Kyung-nam",
+    runtime: "70 min",
+    rating: 4.8,
+    poster: "https://upload.wikimedia.org/wikipedia/en/c/ca/Phantom_Lawyer_poster.png", // courtroom law books
     synopsis:
-      "The aging patriarch of an organized crime dynasty in postwar New York transfers control of his clandestine empire to his reluctant youngest son. A study of family, loyalty, and the price of power."
+      "A small-firm lawyer who can see ghosts gets possessed by them to uncover the truth and resolve unfinished business."
   },
   {
-    title: "Parasite",
-    year: 2019,
+    title: "Squid Game 2",
+    year: 2024,
     genre: "Thriller, Drama",
-    director: "Bong Joon-ho",
-    cast: "Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong",
-    runtime: "132 min",
-    rating: 4.8,
-    poster: "https://image.tmdb.org/t/p/w780/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    director: "Hwang Dong-hyuk",
+    cast: "Lee Jung-jae, Lee Byung-hun, Wi Ha-jun",
+    runtime: "60 min",
+    rating: 4.7,
+    poster: "https://i.pinimg.com/1200x/e4/c7/ed/e4c7ed019776a4139dd0a555c5ecd78c.jpg", // dramatic red lighting mask
     synopsis:
-      "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+      "Seong Gi-hun abandons his plans to go to the US and starts a chase with a motive after the mysterious events of the first game."
+  },
+  {
+    title: "Weak Hero Class 1",
+    year: 2022,
+    genre: "Action, Drama",
+    director: "Yoo Soo-min",
+    cast: "Park Ji-hoon, Choi Hyun-wook, Hong Kyung",
+    runtime: "40 min",
+    rating: 4.8,
+    poster: "https://upload.wikimedia.org/wikipedia/en/3/3e/Weak_Hero_Class_1.jpeg", // school hallway lockers
+    synopsis:
+      "A model student uses his intellect and wits to fight back against the violence that plagues his school."
+  },
+  {
+    title: "Twinkling Watermelon",
+    year: 2023,
+    genre: "Fantasy, Romance, Coming-of-age",
+    director: "Son Jeong-hyeon",
+    cast: "Ryeoun, Choi Hyun-wook, Seol In-ah",
+    runtime: "70 min",
+    rating: 4.9,
+    poster: "https://upload.wikimedia.org/wikipedia/en/5/52/Twinkling_Watermelon.jpg", // electric guitar stage lights
+    synopsis:
+      "A CODA student travels back in time to 1995, where he forms a band with his father as a high schooler."
+  },
+  {
+    title: "Alice in Borderland",
+    year: 2020,
+    genre: "Sci-Fi, Thriller",
+    director: "Shinsuke Sato",
+    cast: "Kento Yamazaki, Tao Tsuchiya, Nijiro Murakami",
+    runtime: "60 min",
+    rating: 4.6,
+    poster: "https://static.wikia.nocookie.net/aliceinborderland/images/a/a2/Alice_in_Borderland_%28Netflix%29_Season_1_Poster_03.jpg/revision/latest/scale-to-width-down/1000?cb=20201211074318", // empty Tokyo city streets
+    synopsis:
+      "An aimless gamer and his friends find themselves in a parallel, empty Tokyo, forced to compete in deadly games to survive."
   },
   {
     title: "Spirited Away",
@@ -35,117 +71,33 @@ const MOVIES = [
     cast: "Rumi Hiiragi, Miyu Irino, Mari Natsuki",
     runtime: "125 min",
     rating: 4.9,
-    poster: "https://image.tmdb.org/t/p/w780/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    poster: "https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png", // Japanese lanterns bathhouse
     synopsis:
       "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, where humans are changed into beasts."
   },
   {
-    title: "Blade Runner 2049",
-    year: 2017,
-    genre: "Sci-Fi, Drama",
-    director: "Denis Villeneuve",
-    cast: "Ryan Gosling, Harrison Ford, Ana de Armas",
-    runtime: "164 min",
-    rating: 4.6,
-    poster: "https://image.tmdb.org/t/p/w780/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
-    synopsis:
-      "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who has been missing for thirty years."
-  },
-  {
-    title: "In the Mood for Love",
-    year: 2000,
-    genre: "Romance, Drama",
-    director: "Wong Kar-wai",
-    cast: "Tony Leung, Maggie Cheung",
-    runtime: "98 min",
-    rating: 4.8,
-    poster: "https://image.tmdb.org/t/p/w780/iYypPT4bhqXfq1b6EnmxvRt6b2Y.jpg",
-    synopsis:
-      "Two neighbors form a strong bond after both suspect extramarital activities of their spouses. However, they agree to keep their bond platonic so as not to commit similar wrongs."
-  },
-  {
-    title: "Pulp Fiction",
-    year: 1994,
-    genre: "Crime, Drama",
-    director: "Quentin Tarantino",
-    cast: "John Travolta, Uma Thurman, Samuel L. Jackson",
-    runtime: "154 min",
-    rating: 4.7,
-    poster: "https://image.tmdb.org/t/p/w780/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
-    synopsis:
-      "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
-  },
-  {
-    title: "Everything Everywhere All at Once",
+    title: "Chainsaw Man",
     year: 2022,
-    genre: "Sci-Fi, Comedy",
-    director: "Daniels",
-    cast: "Michelle Yeoh, Ke Huy Quan, Stephanie Hsu",
-    runtime: "139 min",
-    rating: 4.6,
-    poster: "https://image.tmdb.org/t/p/w780/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
-    synopsis:
-      "An aging Chinese immigrant is swept up in an insane adventure where she alone can save existence by exploring other universes and connecting with the lives she could have led."
-  },
-  {
-    title: "Whiplash",
-    year: 2014,
-    genre: "Drama, Music",
-    director: "Damien Chazelle",
-    cast: "Miles Teller, J.K. Simmons",
-    runtime: "106 min",
+    genre: "Action, Dark Fantasy",
+    director: "Ryū Nakayama",
+    cast: "Kikunosuke Toya, Fairouz Ai, Tomori Kusunoki",
+    runtime: "24 min",
     rating: 4.7,
-    poster: "https://image.tmdb.org/t/p/w780/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+    poster: "https://upload.wikimedia.org/wikipedia/en/2/24/Chainsawman.jpg", // dark gritty urban night chainsaw
     synopsis:
-      "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential."
+      "A teenage boy merges with his pet devil dog to become Chainsaw Man, joining a public safety group to hunt devils."
   },
   {
-    title: "Mad Max: Fury Road",
-    year: 2015,
-    genre: "Action, Adventure",
-    director: "George Miller",
-    cast: "Tom Hardy, Charlize Theron, Nicholas Hoult",
-    runtime: "120 min",
-    rating: 4.6,
-    poster: "https://image.tmdb.org/t/p/w780/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg",
-    synopsis:
-      "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search of her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max."
-  },
-  {
-    title: "The Grand Budapest Hotel",
-    year: 2014,
-    genre: "Comedy, Drama",
-    director: "Wes Anderson",
-    cast: "Ralph Fiennes, Tony Revolori",
-    runtime: "100 min",
+    title: "Young Sheldon",
+    year: 2017,
+    genre: "Comedy",
+    director: "Chuck Lorre, Steven Molaro",
+    cast: "Iain Armitage, Zoe Perry, Lance Barber",
+    runtime: "22 min",
     rating: 4.5,
-    poster: "https://image.tmdb.org/t/p/w780/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+    poster: "https://upload.wikimedia.org/wikipedia/en/6/68/Young_Sheldon_title_card.png", // Texas suburban home warm family
     synopsis:
-      "A writer encounters the owner of an aging high-class hotel, who tells of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge."
-  },
-  {
-    title: "Dune: Part Two",
-    year: 2024,
-    genre: "Sci-Fi, Adventure",
-    director: "Denis Villeneuve",
-    cast: "Timothée Chalamet, Zendaya, Rebecca Ferguson",
-    runtime: "166 min",
-    rating: 4.7,
-    poster: "https://image.tmdb.org/t/p/w780/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
-    synopsis:
-      "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. He must choose between the love of his life and the fate of the universe."
-  },
-  {
-    title: "Eternal Sunshine of the Spotless Mind",
-    year: 2004,
-    genre: "Romance, Sci-Fi",
-    director: "Michel Gondry",
-    cast: "Jim Carrey, Kate Winslet",
-    runtime: "108 min",
-    rating: 4.7,
-    poster: "https://image.tmdb.org/t/p/w780/5MwkWH9tYHv3mV9OdYBMMPLxpyc.jpg",
-    synopsis:
-      "When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories. As they relive their love story, they discover what they cannot bear to forget."
+      "Follows the life of the child genius Sheldon Cooper as he navigates his unique, conventional family in Texas."
   }
 ];
 
@@ -207,13 +159,18 @@ function openModal(m) {
     <div><dt>Genre</dt><dd>${m.genre}</dd></div>
     <div><dt>Year</dt><dd>${m.year}</dd></div>
   `;
+  
   modal.hidden = false;
+  modal.style.display = "flex";
   document.body.classList.add("modal-open");
 }
+
 function closeModal() {
   modal.hidden = true;
+  modal.style.display = "none";
   document.body.classList.remove("modal-open");
 }
+
 modal.addEventListener("click", (e) => {
   if (e.target.matches("[data-close]")) closeModal();
 });
@@ -258,8 +215,8 @@ const empty = document.getElementById("emptyReviews");
 const hint = document.getElementById("formHint");
 
 const SEED_REVIEWS = [
-  { name: "Mara Lim", movie: "Spirited Away", rating: 5, comment: "A film that grows with you. I see something different every time I rewatch it." },
-  { name: "Diego Cruz", movie: "Whiplash", rating: 5, comment: "The final ten minutes of this movie are the most exhilarating in modern cinema. Full stop." }
+  { name: "Neil Togado", movie: "Spirited Away", rating: 5, comment: "A film that grows with you. I see something different every time I rewatch it." },
+  { name: "Karl Duenas", movie: "Spirited Away", rating: 5, comment: "The final ten minutes of this movie are the most exhilarating in modern cinema. Full stop." }
 ];
 
 function stars(n) {
@@ -300,7 +257,7 @@ form.addEventListener("submit", (e) => {
     rating: Number(form.rating.value),
     comment: form.comment.value.trim()
   };
-  if (!data.name || !data.movie || !data.rating || !data.comment) {
+  if (!data.name || !data.movie || isNaN(data.rating) || !data.comment) {
     hint.textContent = "Please fill out every field before publishing.";
     hint.className = "form-hint is-error";
     return;

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cineframe is a curated movie showcase featuring synopses, ratings, trailers, and community reviews of cinema favorites." />
+  <title>Cineframe | A Curated Movie Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Cineframe home">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M2 8h20M2 16h20M6 4v16M18 4v16"/>
+        </svg>
+        <span class="brand-text">Cineframe</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#gallery">Gallery</a>
+        <a href="#essay">Essay</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Volume 04 · Modern Classics
+        </span>
+        <h1 class="hero-title">
+          Frames worth <em>revisiting</em>,<br />
+          stories worth <em>retelling</em>.
+        </h1>
+        <p class="hero-lede">
+          A small, opinionated catalog of films that shaped a generation of cinema lovers.
+          Browse the gallery, read the notes, leave a review.
+        </p>
+        <div class="hero-actions">
+          <a href="#gallery" class="btn btn-primary">
+            Browse the gallery
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#reviews" class="btn btn-ghost">Write a review</a>
+        </div>
+
+        <dl class="hero-stats">
+          <div>
+            <dt>Curated titles</dt>
+            <dd>12</dd>
+          </div>
+          <div>
+            <dt>Decades covered</dt>
+            <dd>1972 to 2024</dd>
+          </div>
+          <div>
+            <dt>Average rating</dt>
+            <dd>4.6 / 5</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">Gallery</p>
+          <h2 class="section-title">Twelve films, one shelf.</h2>
+          <p class="section-sub">Click any poster to read the synopsis, rating, and credits.</p>
+        </header>
+
+        <div class="movie-grid" id="movieGrid"><!-- injected by script.js --></div>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- ESSAY + ASIDE -->
+    <section id="essay" class="section">
+      <div class="container essay-grid">
+        <article class="essay">
+          <p class="section-kicker">Essay</p>
+          <h2 class="section-title">Why we keep returning to the dark room.</h2>
+
+          <p>
+            Cinema is a peculiar medium. It asks you to sit still in the dark with strangers
+            and trust that the next two hours will be worth it. <strong>The good ones reward
+            that trust;</strong> <em>the great ones reshape it</em>. This collection leans toward
+            the latter.
+          </p>
+
+          <p id="essayMore" class="essay-extra" hidden>
+            Each entry was chosen for a single reason: it changed how its director, or its
+            audience, thought about what film could do. Some are <mark>quietly formal</mark>,
+            others are loud and operatic. Together they form a personal, defensible canon.
+          </p>
+
+          <button type="button" class="btn btn-ghost btn-sm" id="toggleEssay" aria-expanded="false" aria-controls="essayMore">
+            Show more
+          </button>
+
+          <blockquote class="quote">
+            <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83V11.17H5.5A1.67 1.67 0 0 1 7.17 9.5V6Zm10 0A5.17 5.17 0 0 0 12 11.17V18h6.83V11.17H15.5A1.67 1.67 0 0 1 17.17 9.5V6Z"/>
+            </svg>
+            <p>
+              Cinema is a matter of what's in the frame and what's out.
+            </p>
+            <footer>
+              <cite>Martin Scorsese</cite>
+            </footer>
+          </blockquote>
+
+          <h3>What this canon values</h3>
+          <ol class="list">
+            <li>A clear point of view from the director.</li>
+            <li>Performances that age into something deeper than charm.</li>
+            <li>An ending that earns the time you gave it.</li>
+          </ol>
+
+          <h3>What it deliberately ignores</h3>
+          <ul class="list">
+            <li>Box office position in opening weekend.</li>
+            <li>Number of sequels or franchise potential.</li>
+            <li>Whether it is currently fashionable to like.</li>
+          </ul>
+
+          <h3>Glossary</h3>
+          <dl class="glossary">
+            <div>
+              <dt>Mise en scène</dt>
+              <dd>Everything intentionally arranged inside a single frame: actors, props, light, color.</dd>
+            </div>
+            <div>
+              <dt>Diegetic sound</dt>
+              <dd>Audio whose source exists inside the world of the film, such as a radio a character switches on.</dd>
+            </div>
+            <div>
+              <dt><abbr title="Director of Photography">DoP</abbr></dt>
+              <dd>The crew member responsible for the camera and lighting departments.</dd>
+            </div>
+          </dl>
+        </article>
+
+        <aside class="aside-card" aria-label="Featured trailer">
+          <p class="aside-kicker">Now playing</p>
+          <h3 class="aside-title">Featured trailer</h3>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/sY1S34973zA"
+              title="Featured movie trailer"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="aside-meta">Inception · 2010 · Christopher Nolan</p>
+          <hr class="rule rule-tight" />
+          <p class="aside-kicker">Score sample</p>
+          <audio controls preload="none" class="audio">
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1718e49e9e.mp3?filename=cinematic-time-lapse-112669.mp3" type="audio/mpeg" />
+            Your browser does not support audio playback.
+          </audio>
+          <p class="aside-meta">Cinematic ambient (royalty free)</p>
+        </aside>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section">
+      <div class="container reviews-grid">
+        <div class="review-form-wrap">
+          <p class="section-kicker">Reviews</p>
+          <h2 class="section-title">Leave your verdict.</h2>
+          <p class="section-sub">Short and honest beats long and polite. 280 characters max.</p>
+
+          <form id="reviewForm" class="review-form" novalidate>
+            <div class="field">
+              <label for="rName">Your name</label>
+              <input id="rName" name="name" type="text" placeholder="e.g. Alex Reyes" required />
+            </div>
+            <div class="field">
+              <label for="rMovie">Movie title</label>
+              <input id="rMovie" name="movie" type="text" placeholder="e.g. Parasite" required />
+            </div>
+            <div class="field">
+              <label for="rRating">Rating</label>
+              <select id="rRating" name="rating" required>
+                <option value="">Select a rating</option>
+                <option value="5">5 / 5 · Essential</option>
+                <option value="4">4 / 5 · Strongly recommend</option>
+                <option value="3">3 / 5 · Worth a watch</option>
+                <option value="2">2 / 5 · Mixed feelings</option>
+                <option value="1">1 / 5 · Skip it</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rComment">Review</label>
+              <textarea id="rComment" name="comment" rows="4" maxlength="280" placeholder="What stayed with you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Publish review</button>
+            <p class="form-hint" id="formHint" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="review-list-wrap">
+          <p class="section-kicker">Reader reviews</p>
+          <ul id="reviewList" class="review-list" aria-live="polite"></ul>
+          <p id="emptyReviews" class="empty-state">No reviews yet. Be the first to write one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-inner">
+        <p class="section-kicker">About</p>
+        <h2 class="section-title">Built as a coursework activity.</h2>
+        <p class="about-body">
+          Cineframe was assembled for <abbr title="Computer Networks and Security">CPPC 18/18L</abbr>
+          Activity 10 at Marinduque State University, College of Engineering. It demonstrates
+          semantic HTML, design tokens, and lightweight JavaScript interactivity without any
+          frameworks.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">Cineframe</p>
+        <p class="footer-meta">A movie showcase by a computer engineering student.</p>
+      </div>
+      <p class="footer-meta">© 2026 Cineframe. Coursework project, not for redistribution.</p>
+    </div>
+  </footer>
+
+  <button type="button" id="toTop" class="to-top" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- MODAL -->
+  <div id="movieModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="document">
+      <button type="button" class="modal-close" aria-label="Close" data-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-poster" id="modalPoster" aria-hidden="true"></div>
+      <div class="modal-body">
+        <p class="modal-kicker" id="modalMeta"></p>
+        <h3 id="modalTitle" class="modal-title"></h3>
+        <div class="modal-rating" id="modalRating"></div>
+        <p id="modalSynopsis" class="modal-synopsis"></p>
+        <dl class="modal-credits" id="modalCredits"></dl>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
